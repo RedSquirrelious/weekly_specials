@@ -5,7 +5,7 @@ from selenium import webdriver
 
 DRIVER_FILE = os.environ.get("SPECIALS_DRIVER")
 SOUP_FORMAT = "lxml"
-mm_cookies_file = "MetropolitanMarketCookies.pkl"
+mm_cookies_file = "cookies/MetropolitanMarketCookies.pkl"
 mm_url = "http://metropolitan-market.com/specials/search.php?c%5B%5D=all"
 
 
@@ -43,6 +43,10 @@ def get_specials(bso):
     return specials
 
 
+def get_dates(specials):
+    dates = specials.find("div", {"class": "specials_dates"})
+    return dates
+
 def get_items(specials):
     items = specials.findAll("div", {"class": "item_view"})
     return items
@@ -76,24 +80,24 @@ def parse_specials_to_dict(items):
             ws[id]['organic'] = False
     return ws
 
-
-b = make_browser(DRIVER_FILE)
-store_cookies(b, mm_url, mm_cookies_file)
-cookies = get_cookies(mm_cookies_file)
-innerHTML = get_site_innerhtml(b, mm_url, cookies)
-bso = make_soup(innerHTML, SOUP_FORMAT)
-weekly_specials = get_specials(bso)
-items = get_items(weekly_specials)
-ws = parse_specials_to_dict(items)
-
-print(ws)
-print(len(ws))
-
-
-dates = weekly_specials.find("div", {"class": "specials_dates"})
-print(dates.text.strip())
-
-
-
-
-
+#
+# b = make_browser(DRIVER_FILE)
+# store_cookies(b, mm_url, mm_cookies_file)
+# cookies = get_cookies(mm_cookies_file)
+# innerHTML = get_site_innerhtml(b, mm_url, cookies)
+# bso = make_soup(innerHTML, SOUP_FORMAT)
+# weekly_specials = get_specials(bso)
+# items = get_items(weekly_specials)
+# ws = parse_specials_to_dict(items)
+#
+# print(ws)
+# print(len(ws))
+#
+#
+# dates = weekly_specials.find("div", {"class": "specials_dates"})
+# print(dates.text.strip())
+#
+#
+#
+#
+#
