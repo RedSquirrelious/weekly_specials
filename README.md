@@ -10,5 +10,5 @@ Help users plan their shopping trips by supplying information on weekly specials
     *Let us show you.*
 * Particular type of food you want?  
     *Let's see what's on sale...*
-* Unsure of which store will give you the best bang for your buck? 
+* Unsure of which store will give you the best bang for your buck?   
     *Tell us what you're looking for and we'll look into it.*
