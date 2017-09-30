@@ -2,11 +2,7 @@ from bs4 import BeautifulSoup
 import os
 import pickle
 from selenium import webdriver
-
-DRIVER_FILE = os.environ.get("SPECIALS_DRIVER")
-SOUP_FORMAT = "lxml"
-mm_cookies_file = "cookies/MetropolitanMarketCookies.pkl"
-mm_url = "http://metropolitan-market.com/specials/search.php?c%5B%5D=all"
+import constants
 
 
 
