@@ -3,7 +3,7 @@ import os
 import pickle
 from selenium import webdriver
 from .metropolitan_market import *
-from .town_and_country import *
+from .town_and_country_central_market import *
 
 
 def make_browser(driver_file):
@@ -20,8 +20,8 @@ def resolve_url(domain_url, search_url, secure_protocol=False):
     return full_url
 
 
-def resolve_file_path(file):
-    path = os.path.join(os.path.dirname(os.getcwd()), file)
+def resolve_file_path(folder, file):
+    path = os.path.join(os.path.dirname(os.getcwd()), folder, file)
     return path
 
 
