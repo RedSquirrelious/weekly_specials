@@ -1,2 +1,2 @@
-from .formats import *
+from .generic import *
 from .market_info import *

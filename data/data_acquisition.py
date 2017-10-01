@@ -3,13 +3,17 @@ import os
 import pickle
 from selenium import webdriver
 import constants
-
+from .metropolitan_market import *
+from .town_and_country import *
 
 
 def make_browser(driver_file):
     browser = webdriver.Chrome(driver_file)
     return browser
 
+def resolve_file_path(file):
+    path = os.path.join(os.path.dirname(os.getcwd()), file)
+    return path
 
 def store_cookies(browser, url, file):
     browser.get(url)
