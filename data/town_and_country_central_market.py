@@ -1,30 +1,30 @@
 
 
-def get_tc_specials(bso):
+def get_tc_cm_specials(bso):
     specials = bso.find("div", {"id": "content"})
     return specials
 
 
-def get_tc_dates(specials):
+def get_tc_cm_dates(specials):
     dates = specials.find("h2", {"class": "effective"})
     return dates
 
-def get_tc_market_buys_dates(specials):
+def get_tc_cm_market_buys_dates(specials):
     dates = specials.find("div", {"class":"mb_date"})
     return dates.text.strip()
 
-def get_tc_items(specials):
+def get_tc_cm_items(specials):
     items = specials.findAll("tr", {"class": "adTextItem"})
     return items
 
 
-def get_tc_market_buys_items(specials):
+def get_tc_cm_market_buys_items(specials):
     items = specials.findAll("div", {"class": "mb_prod"})
     return items
 
 ''' be careful when passing in dictionaries.  Big Board Specials and Biweekly Specials 
 have identical ids for different items '''
-def parse_tc_specials(ws, items):
+def parse_tc_cm_specials(ws, items):
     l = 'local'
     o = 'organic'
     for item in items:
@@ -48,7 +48,7 @@ def parse_tc_specials(ws, items):
             ws[id]['organic'] = False
 
 
-def parse_tc_market_buys_specials(ws, items):
+def parse_tc_cm_market_buys_specials(ws, items):
     l = 'local'
     o = 'organic'
     for item in items:

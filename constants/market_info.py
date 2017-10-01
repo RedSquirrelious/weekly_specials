@@ -11,6 +11,10 @@ PCC_SPECIALS_URL = "departments/weekly-specials/"
 
 TC_COOKIES = "TownAndCountryCookies.pkl"
 TC_DOMAIN_URL = "townandcountrymarkets.com/"
-TC_BIWEEKLY_URL = "specials/biweekly-buys/?t=text&view=all"
-TC_BIG_BOARD_URL = "specials/big-board-buys/?t=text"
-TC_MARKET_BUYS_URL = "specials/market-buys/"
+
+CM_COOKIES = "CentralMarket.pkl"
+CM_DOMAIN_URL = "central-market.com/"
+
+TC_CM_BIWEEKLY_URL = "specials/biweekly-buys/?t=text&view=all"
+TC_CM_BIG_BOARD_URL = "specials/big-board-buys/?t=text"
+TC_CM_MARKET_BUYS_URL = "specials/market-buys/"
