@@ -1,5 +1,5 @@
 # Weekly Specials
-API for comparison shopping -- weekly specials as seen on local market websites
+API for comparison shopping -- weekly specials as seen on local market websites.  We scrape data; you save time and $.
 
 ## Problem:  
 Limited budget, limited time for shopping
